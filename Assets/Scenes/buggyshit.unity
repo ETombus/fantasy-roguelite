@@ -469,6 +469,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6613181965270085270, guid: b8720a025facbb94db1a1e05eda09a22, type: 3}
+      propertyPath: shooterDist
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6613181965270085271, guid: b8720a025facbb94db1a1e05eda09a22, type: 3}
       propertyPath: damage
       value: 15
@@ -499,11 +503,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613181965270085275, guid: b8720a025facbb94db1a1e05eda09a22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.629562
+      value: -48.81
       objectReference: {fileID: 0}
     - target: {fileID: 6613181965270085275, guid: b8720a025facbb94db1a1e05eda09a22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.332367
+      value: -8.17
       objectReference: {fileID: 0}
     - target: {fileID: 6613181965270085275, guid: b8720a025facbb94db1a1e05eda09a22, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5801,7 +5805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1df84388010ba44a941a0680ec9c688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMimic: 0
+  isMimic: 1
   locked: 1
   chestOpened: {fileID: -7823706010848949700, guid: d0b0dc4490efc73449b001bf8fc2ed7e, type: 3}
   mimic: {fileID: 8152742032114810228, guid: 32c32349aaf2a104c8a6e9c4f0d65628, type: 3}

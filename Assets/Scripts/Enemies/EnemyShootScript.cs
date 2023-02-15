@@ -15,9 +15,13 @@ public class EnemyShootScript : MonoBehaviour
 
     public float range;
     public float damage;
-    public float magSize;
+    [Tooltip("projectiles before reload")]
+    public int magSize;
+    [Tooltip("projectile travel speed")]
     public float shotSpeed;
+    [Tooltip("delay between projectiles")]
     public float shotDelay;
+    [Tooltip("read the name, you don't need a tooltip")]
     public float reloadTime;
 
     public GameObject projectile;
@@ -42,7 +46,7 @@ public class EnemyShootScript : MonoBehaviour
     {
         shooting = true;
         //fires as long as magazine isn't empty
-        for (float i = magSize; i > 0; i--)
+        for (int i = magSize; i > 0; i--)
         {
             yield return new WaitForSeconds(shotDelay);
             //shoot anim

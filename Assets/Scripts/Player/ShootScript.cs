@@ -36,7 +36,7 @@ public class ShootScript : MonoBehaviour
         verticalRotation = Input.GetAxisRaw("Fire1");
         horizontalRotation = Input.GetAxisRaw("Fire2");
 
-        //rotates crossbow between 8 45° angles according to inputs 
+        //rotates crossbow between 8 45ï¿½ angles according to inputs 
         Vector2 crossbowRotation = new Vector2(horizontalRotation, verticalRotation);
         Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, crossbowRotation);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000000 * Time.deltaTime);

@@ -32,7 +32,7 @@ public class ChestScript : MonoBehaviour
         player = GameObject.Find("Player");
     }
     //FIX NOFACE CHECK CHEST
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + other.gameObject.tag);
         if (other.gameObject.tag == "Projectile" && isMimic)
@@ -44,12 +44,7 @@ public class ChestScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Projectile" && isMimic)
-        {
-            Instantiate(mimic, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-
+        
         if (collision.gameObject.name == "Player")
         {
             if (isMimic)
@@ -97,7 +92,7 @@ public class ChestScript : MonoBehaviour
                     else
                         temp = Instantiate(pickups[coin], transform.position, Quaternion.identity);
 
-                    //FIX THIS SHIT CODE, OMFG DUDE\\
+                    //FIX THIS SHIT CODE, OMFG DUDE\\ //(TRY SWITCH playerpos & temppos)
                     Vector3 dir = player.transform.position - temp.transform.position;
                     temp.GetComponent<Collider2D>().enabled = false;
                     temp.GetComponent<Rigidbody2D>().AddForce(-dir * Random.Range(5, 10), ForceMode2D.Impulse);
